@@ -55,3 +55,48 @@ font-size: 14px;
     background: #f8cdda;
     color: black;
 }
+
+.name1{
+      display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #e9eaee;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    color: rgb(1, 11, 11);
+}
+
+.my-card{
+    position: fixed;
+    bottom: 200px;
+    left: 53%;
+
+}
+
+.name1:hover{
+    background: #080607;
+    color: rgb(252, 247, 247);
+}
+.x-o{
+        position: fixed;
+    bottom: 200px;
+    left: 41%;
+}
+
+.name2{
+     display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #e9eaee;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    color: rgb(1, 11, 11);
+}
+.name2:hover{
+      background: #080607;
+    color: rgb(252, 247, 247);
+}
