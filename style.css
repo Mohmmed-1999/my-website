@@ -1,91 +1,101 @@
 body{
-   margin: 0;
-   padding: 0;
-   font-family: Arial;
-   background: linear-gradient(135deg, #1d2b64, #f8cdda);
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.card{
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transition: 0.3s;
-
-}
-.card:hover{
-    transform: scale(1.05);
-}
-
-.card img{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.card h1{
-    margin: 10px 0;
-}
-
-.bio{
-color: #555;
-font-size: 14px;
-}
-
-.btn{
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #1d2d64;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: 0.3s;
-}
-
-.btn:hover{
-    background: #f8cdda;
-    color: black;
-}
-
-.content-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.extra-buttons a{
-    margin-top: 15px;
-    width: 150px;
-    gap: 10px;
-  
+   background:linear-gradient(135deg,#1d2b64, #f8cdda);
     
 }
 
-.name1, .name2{
-    display: inline-block;
-    width: 150px;
-    padding: 12px;
-    background-color: white;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    gap: 100px;
+.logo{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    
 }
 
-.name1:hover,.name2:hover{
-    background: black;
-    color: aliceblue;
+.logo img{
+    border-radius: 30px;
+  
 }
+
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 100vh;
+    
+}
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.my-link{
+    text-decoration: none;
+    background-color: #043f53;
+    color: rgb(246, 244, 244);
+    padding: 10px 150px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    font-family: sans-serif;
+    display: block;
+    font-size: 30px;
+    
+    
+}
+
+.my-link:hover{
+    background-color: #eef1f4;
+    color: #080b0c;
+    transform: scale(1.05);
+}
+
+.center-image{
+    border-radius: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow:  0 10px 30px rgba(0,0,0,0.5);
+   
+}
+
+.sambyby{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 15px;
+    border-top: 1px solid #161515;
+    margin-top: 10px;
+}
+
+.samconn{
+    display: flex;
+    gap: 200px;
+   
+    
+}
+
+.samconn img{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.samconn img:hover{
+    transform: scale(1.1);
+}
+
+.contname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+
+
 
