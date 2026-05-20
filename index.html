@@ -5,44 +5,304 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
-    <div class="logo">
-        <img src="img/logo.png" width="200px">
-    </div>
-
-   
-  <div class="content">
-
-    <div class="button-group">
-        <a href="#" class="my-link">name1</a>
-        <a href="#" class="my-link">name2</a>
-        <a href="calculator/2index.html" class="my-link">calculator</a>
-        <a href="calculator/abot.html" class="my-link">Open X O game</a>
-    </div>
-    <img src="img/1000000782.jpg" class="center-image">
-
-
-    <div class="button-group">
-        <a href="#" class="my-link">name5</a>
-        <a href="calculator/About-me.html" class="my-link">About Me</a>
-        <a href="#" class="my-link">name7</a>
-        <a href="#" class="my-link">name8</a>
-    </div>
-  </div>
-  <hr>
-<div class="contname">Contact me.</div>
-<div class="sambyby">
+  <header>
+    <img src="/img/1000000782.jpg">
+    <nav class="navigation">
+        <ul>
+            <li><a href="#aboutMe">About me</a></li>
+            <li><a href="#myworks">My Works</a></li>
+            <li><a href="#contactme">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+<hr>
+<div class="hero-section" id="aboutMe">
+    <h1>HI</h1>
+    <p>im a front-end developer who creates clean,responsive,and easy-to-use web experiences</p>
+    <a href="/ca.ve.docx" class="download-btn">Download CV</a>
+</div>
+<div class="hero-img">
+    <h1>Business Department</h1>
+    <img src="/img/حاسبه.webp">
+</div>
+<div class="hrev-btn" id="myworks">
+   <a href="/calculator/samsung.html" class="Works-btn">Samsung Official Clone</a>
+   <a href="/calculator/2index.html" class="Works-btn">Smartphone Calculator</a>
+   <a href="/calculator/abot.html" class="Works-btn">X O Game</a>
+   <a href="#" class="Works-btn">More Projects</a>
+   <a href="#" class="Works-btn">More Projects</a>
+</div>
+<div class="hero-img11">
+    <h1>Communication Department</h1>
+    <img src="/img/cell.webp">
+</div>
+<div class="contname">.Contact me</div>
+<div class="sambyby" id="contactme">
     <div class="samconn">
-        <a href="https://instagram.com/jabouri1998" target="_blank"><img src="img/instagram-167-svgrepo-com.svg"></a>
-        <a href="https://t.me/@ali1122000" target="_blank"><img src="img/telegram-svgrepo-com.svg"></a>
-        <a href="https://wa.me/7700187286" target="_blank"><img src="img/whatsapp-128-svgrepo-com.svg"></a>
+        <a href="https://instagram.com/mohmmed1999.iraq" target="_blank"><img src="/img/11insta.png"></a>
+        <a href="https://t.me/@MOHAMMED19991010" target="_blank"><img src="/img/22tle.png"></a>
+        <a href="https://wa.me/7840603453" target="_blank"><img src="/img/33whtsApp.png"></a>
     </div>
 </div>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #3c485b;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+header img{
+    width: 100px;
+    height: 150px;
+    border-radius: 30%;
+}
+.navigation ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+.navigation a{
+  
+    transform: translate(-10%, -10%);
+    padding: 10px 10px;
+    background: rgb(251, 246, 246);
+    color: rgb(18, 6, 6);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+    gap: 2rem;
+}
+.navigation a:hover{
+    background-color: black;
+    color: aliceblue;
+}
+.hero-section{
+   text-align: center;
+   padding: 5rem 20px;
+   margin-top: 100px;
+    
+}
+.hero-section h1{
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+.hero-section p{
+    font-size: 1.2rem;
+    color: #b3c5d7;
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+.download-btn{
+     transform: translate(-10%, -10%);
+    padding: 10px 10px;
+    background: rgb(1, 30, 252);
+    color: rgb(242, 242, 242);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.download-btn:hover{
+    background-color: rgb(176, 176, 246);
+    color: black;
+}
+.hero-img{
+    margin-top: 200px;
+     text-align: center;
+   padding: 5rem 20px;
+   
+}
+.hero-img img{
+    border-radius: 20%;
+    width: 90%;
+    height: 700px;
+}
+.hero-img h1{
+       font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 4rem;
+    font-family: sans-serif;
+}
+.hrev-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    margin-top: 2.5rem;
+    padding: 0 20px;
+}
+.Works-btn{
+    display: block;
+    width: 100%;
+    max-width: 580px;
+    padding: 14px 20px;
+    background-color: #ffffff;
+    color: #180606;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+.Works-btn:hover{
+    background-color: #585a5c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    color: #ffffff;
+}
+.hero-img11{
+     margin-top: 200px;
+     text-align: center;
+   padding: 5rem 20px;
+}
+.hero-img11 img{
+     border-radius: 20%;
+    width: 90%;
+    height: 700px;
+}
+.hero-img11 h1{
+      font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 4rem;
+    font-family: sans-serif;
+}
+.contname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.sambyby{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 15px;
+    border-top: 1px solid #fcf7f7;
+    margin-top: 10px;
+}
+
+.samconn{
+    display: flex;
+    gap: 200px;
+   
+    
+}
+
+.samconn img{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.samconn img:hover{
+    transform: scale(1.1);
+}
 
 
 
-    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+       *{
+        overflow-x: hidden;
+     }
+     header{
+        padding: 0 20px;
+        margin: 1rem auto;
+     }
+     header img{
+        width: 50px;
+        height: 75px;
+     }
+     .navigation a{
+        font-size: 10px;
+     }
+     header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+.navigation ul{
+    gap: 10px;
+}
+.hero-img img{
+    width: 100%;
+    height: 300px;
+}
+.hero-img{
+    margin-top: 50px;
+}
+.hero-img h1{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.Works-btn{
+    max-width: 200px;
+    font-size: 15px;
+    width: 90%;
+}
+.hero-img11 img{
+    width: 100%;
+    height: 300px;
+}
+.hero-img11 h1{
+     font-size: 20px;
+    margin-top: 10px;
+}
+   .contname{
+        font-size: 20px;
+        text-align: center;
+    }
+    .samconn{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .samconn img{
+        width: 20px;
+        height: 20px;
+    }
+
+     
+}
+</style>
+
+    <script></script>
 </body>
 </html>
