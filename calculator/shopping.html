@@ -17,7 +17,7 @@
         <h1>Samsung Business</h1>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search Here">
-            <img src="/img/بحث.png" class="search-icon" onclick="searchNow()">
+            <img src="../img/بحث.png" class="search-icon" onclick="searchNow()">
         </div>
         <div class="tags">
             <button onclick="goToPage('Shop.html')">Galaxy A72</button>
@@ -105,7 +105,7 @@
                         <label for="not-robot">Are you Robert</label>
                     </div>
                     <div class="captcha-right">
-                         <img src="/img/robrt.png" width="50px">
+                         <img src="../img/robrt.png" width="50px">
                          
                     </div>
                 </div>
@@ -115,8 +115,7 @@
     </div>
 </div>
 
-
- <div class="samsung12">
+   <div class="samsung-13">
     <p>* This image is simualted.You may need to sign in to a Samsung account to use some (Al) features.</p>
 
     <p>* This imags is simualted.The actual UX/UI may differ,and color availability may vary depending on the country or carrier Products are sold separately.</p>
@@ -129,11 +128,7 @@
       the disclaimer placement must be precisely defined.
     </p>
    </div>
-
-
-   
-
-    <footer class="samsung-footer">
+    <footer class="samsung-footer2">
     <div class="footer-container">
 
 
@@ -201,13 +196,16 @@
      </div>
     </div>
    </footer>
+ 
 
-<div class="contname">.Contact me</div>
-<div class="sambyby">
+ <div class="contname">.Contact me</div>
+
+
+ <div class="sambyby">
     <div class="samconn">
-        <a href="https://instagram.com/mohmmed1999.iraq" target="_blank"><img src="/img/instagram-167-svgrepo-com.svg"></a>
-        <a href="https://t.me/@MOHAMMED19991010" target="_blank"><img src="/img/telegram-svgrepo-com.svg"></a>
-        <a href="https://wa.me/7840603453" target="_blank"><img src="/img/whatsapp-128-svgrepo-com.svg"></a>
+        <a href="https://instagram.com/mohmmed1999.iraq" target="_blank"><img src="../img/instagram-167-svgrepo-com.svg" ></a>
+        <a href="https://t.me/@MOHAMMED19991010" target="_blank"><img src="../img/telegram-svgrepo-com.svg" ></a>
+        <a href="https://wa.me/7840603453" target="_blank"><img src="../img/whatsapp-128-svgrepo-com.svg"></a>
     </div>
 </div>
     <script>
@@ -299,7 +297,7 @@ body{
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    background-image: url("/img/images.jfif");
+    background-image: url("../img/images.jfif");
     background-size: cover;
     background-position: center;
 }
@@ -565,13 +563,14 @@ body{
     background-color: #989797;
 }
 
-.samsung12{
+
+.samsung-13{
     text-align: left;
     direction: ltr;
     margin-top: 100px;
     
 }
-.samsung12 p{
+.samsung-13 p{
     line-height: 1.6;
     margin-top: 40px;
     padding: 0 20px;
@@ -579,8 +578,8 @@ body{
     font-size: 16px;
     font-weight: bold;
 }
-.samsung-footer{
-    padding: 80px 60px;
+.samsung-footer2{
+   width: 100%;
     border-top: 1px solid #161515;
     direction: ltr;
     font-family: sans-serif;
@@ -661,12 +660,7 @@ body{
 .samconn img:hover{
     transform: scale(1.1);
 }
-
-
-
-
-
-@media(max-width:600px){
+@media(max-width:430px){
     .content h1{
         font-size: 24px;
         margin-bottom: 15px;
@@ -716,11 +710,13 @@ body{
         margin-top: 20px;
         width: 100%;
      }
-     .samsung12 p{
+    .samsung-13 p{
     font-size: 10px;
 }
 .footer-container{
     flex-direction: column-reverse;
+    font-family: sans-serif;
+    text-align: center;
 }
 .footer-column:not(:last-child){
     border-bottom: 1px solid #0f0303;
@@ -739,7 +735,6 @@ body{
         width: 20px;
         height: 20px;
     }
-
 }
     </style>
 </body>
