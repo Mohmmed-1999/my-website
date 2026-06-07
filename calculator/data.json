@@ -1,0 +1,194 @@
+
+    [
+    {
+        "id": 1,
+        "brand": "هيونداي",
+        "model": "توسان",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/هونداي.webp",
+        "features": ["شاشه ذكيه" ,"دفع رباعي" ,"بانوراما"]
+    },
+    {
+         "id": 2,
+        "brand": "تشانجان",
+        "model": "بلس CS75",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/شانجان.webp",
+        "features": ["مقاعد جلد كهرباىْيه" ,"كاميرات 360" ,"رادار ذكي"]
+    },
+    {
+         "id": 3,
+        "brand": "تويوتا",
+        "model": "كامري",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/تيوتا كامري.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"]
+    },
+       {
+         "id": 1,
+        "brand":"تويوتا",
+        "model": "كامري",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-1.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "../calculator/Camry.html"
+        
+    },
+       {
+         "id": 2,
+        "brand": "تويوتا",
+        "model": "كامري",
+        "year": 2023,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-2.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "../calculator/Camry2.html"
+    },
+       {
+         "id": 3,
+        "brand": "لكسز",
+        "model": "ES",
+        "year": 2023,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-3.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "../calculator/Lexus.html"
+    },
+       {
+         "id": 4,
+        "brand": "ميتسوبيشي",
+        "model": "أكليبس كروس",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-4.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "../calculator/Crossover.html"
+    },
+       {
+         "id": 1,
+        "brand": "كيا",
+        "model": "K5 الرياضيه",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+1.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "../calculator/Kia.html"
+    },
+       {
+         "id": 2,
+        "brand": "هيونداي",
+        "model": "ألانترا",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+2.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "../calculator/Hyundai.html"
+    },
+       {
+         "id": 3,
+        "brand": "كيا",
+        "model": "سبورتج",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+3.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 4,
+        "brand": "هيونداي",
+        "model": "سانتافي",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+4.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 1,
+        "brand": "شانجان",
+        "model": "ألسفن",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-1.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 2,
+        "brand": "شانجان",
+        "model": "ألسفن",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-2.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 3,
+        "brand": "شانجان",
+        "model": "ألسفن",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-3.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 4,
+        "brand": "شانجان",
+        "model": "سي أس 35 بلس",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-4.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+        {
+         "id": 5,
+        "brand": "شانجان",
+        "model": "يوني تي",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-5.jfif",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "../calculator/Changan.html"
+    }
+  
+]

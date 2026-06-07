@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الطيف لتجارة السيارات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="main-title">شركة الطيف لتجارة السيارات</h1>
+            <p class="sub-title">
+                <span> الكوري</span>
+                <span> الصيني</span>
+                <span> الياباني</span>
+            </p>
+        </div>
+    </header>
+  <section class="main-banner">
+        <img src="../img/كارينز-2025.webp" class="main-banner-img">
+  </section>
+    <main>
+        <div class="container cars-container" id="carsContainer">
+
+        </div>
+    </main>
+    <section class="premium-section">
+        <div class="container11">
+            <h2 class="section-title">فخامة الياباني: سيارات متميزه وبأشكال مذهله</h2>
+            <div class="premium-container" id="premiumCarsContainer">
+            </div>
+        </div>
+    </section>
+
+    <section class="korean-sports-section">
+        <div class="container">
+            <h2 class="sport-title">الكوريه: سيارات متميزه وبأشكال مذهله</h2>
+            <div class="sports-container" id="koreanSportsContainer">
+            </div>
+        </div>
+    </section>
+    <section class="chinese-slider-section">
+        <div class="container">
+            <h2 class="slider-section-title">الفخامه الصينيه: تكنولوجيا وراحه متكامله</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn next-btn" id="nextBtn">🔜</button>
+                <div class="slider-container" id="chineseSliderContainer">
+                </div>
+                <button class="slider-btn prev-btn" id="prevBtn">🔚</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>شركة الطيف 2025</p>
+    </footer>
+    <footer class="site-instructions">
+        <div class="instructions-container">
+            <h2>💡تعليمات وأرشادات عامه</h2>
+            <div class="instructions-grid">
+            <div class="instructions-item">
+                <i class="fas fa-car"></i>
+                <h3>فحص السيارات</h3>
+                <p>جميع السيارات المعروضه تخضع لفخص شامل قبل عرضها في المعرض لضمان سلامتها وجودتها</p>
+            </div>
+            <div class="instructions-item">
+                <i class="fas fa-file-contract"></i>
+                <h3>الوثاىْق المطلوبه</h3>
+                <p>يرجى أحضار المستمسكات الرسيميه الهويه, بطاقة السكن لاتمام عملية البيع والشراء وتحويل الملكيه</p>
+            </div>
+            <div class="instructions-item booking-section">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>الحجز والعربون</h3>
+                <p>يعتبر حجز السياره ملغيا في حال عدم أستكمال ألاجراءات خلال 48 ساعه من دفع العربون</p>
+                <div class="booking-contacts">
+                    <p class="booking-title">للحجز والاستفسار:</p>
+                    <a href="https://wa.me/9647885560427" target="_blank" class="contact-btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>07885560427 (واتساب)</span>
+                    </a>
+                    <a href="https://t.me/MOHAMMED19991010" target="_blank" class="contact-btn telegrem-btn">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span>@شركة الطيف (تليجرام)</span>
+                    </a>
+                </div>
+
+            </div>
+            </div>
+        <hr class="footer-divider">
+        <p class="copyrights">جميع الحقوق محفوضه & شركة الطيف لتجارة السيارات 2025</p>
+        </div>
+    </footer>
+<script>
+    const carsData = [
+          {
+        "id": 1,
+        "brand": "هيونداي",
+        "model": "توسان",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/هونداي.webp",
+        "features": ["شاشه ذكيه" ,"دفع رباعي" ,"بانوراما"]
+    },
+    {
+         "id": 2,
+        "brand": "تشانجان",
+        "model": "بلس CS75",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/شانجان.webp",
+        "features": ["مقاعد جلد كهرباىْيه" ,"كاميرات 360" ,"رادار ذكي"]
+    },
+    {
+         "id": 3,
+        "brand": "تويوتا",
+        "model": "كامري",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/تيوتا كامري.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"]
+    },
+       {
+         "id": 1,
+        "brand":"تويوتا",
+        "model": "كامري",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-1.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+        
+    },
+       {
+         "id": 2,
+        "brand": "تويوتا",
+        "model": "كامري",
+        "year": 2023,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-2.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 3,
+        "brand": "لكسز",
+        "model": "ES",
+        "year": 2023,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-3.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 4,
+        "brand": "ميتسوبيشي",
+        "model": "أكليبس كروس",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الياباني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/1-4.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 1,
+        "brand": "كيا",
+        "model": "K5 الرياضيه",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+1.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 2,
+        "brand": "هيونداي",
+        "model": "ألانترا",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+2.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 3,
+        "brand": "كيا",
+        "model": "سبورتج",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+3.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 4,
+        "brand": "هيونداي",
+        "model": "سانتافي",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الكوري",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/+4.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 1,
+        "brand": "شانجان",
+        "model": "ألسفن",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-1.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 2,
+        "brand": "شانجان",
+        "model": "ألسفن",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-2.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 3,
+        "brand": "شانجان",
+        "model": "ألسفن",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-3.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+       {
+         "id": 4,
+        "brand": "شانجان",
+        "model": "سي أس 35 بلس",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-4.webp",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    },
+        {
+         "id": 5,
+        "brand": "شانجان",
+        "model": "يوني تي",
+        "year": 2025,
+        "price": "31,500 $",
+        "origin": "الصيني",
+        "engine": "2.0L 4-Cylinder",
+        "image": "../img/-5.jfif",
+        "features": ["اقتصاديه جدا بالوقود" ,"بصمة تشغيل" ,"تحديد مسار"],
+        "link": "#"
+    }
+    ]
+    const carsContainer = document.getElementById("carsContainer");
+  
+    function displayCaes(cars){
+        carsContainer.innerHTML = "";
+        cars.forEach(car => {
+            const carCard = document.createElement('div');
+            carCard.className = 'car-card';
+
+            carCard.innerHTML = `
+            <img src="${car.image}" alt="${car.brand} ${car.model}" class="car-img">
+            <div class="car-info">
+                <span class="car-origin">${car.origin}</span>
+                <h3 class="car-name">${car.brand} - ${car.model}</h3>
+                <p class="car-year">الموديل: ${car.year}</p>
+                <p class="car-engine">المحرك: ${car.engine}</p>
+                <div class="car-price">${car.price}</div>
+                </div>;`
+                carsContainer.appendChild(carCard);
+
+        });
+    }
+displayCaes(carsData);
+
+
+const carscontainer = document.getElementById('carsContainer');
+const premiumCarsContainer = document.getElementById('premiumCarsContainer');
+displayCaes(carsData);
+        function displayStandardCars(cars){
+        carsContainer.innerHTML = "";
+        cars.forEach(car => {
+            const carCard = document.createElement('div');
+            carCard.className = 'car-card';
+
+            carCard.innerHTML = `
+            <img src="${car.image}" alt="${car.brand} ${car.model}" class="car-img">
+            <div class="car-info">
+                <span class="car-origin">${car.origin}</span>
+                <h3 class="car-name">${car.brand} - ${car.model}</h3>
+                <p class="car-year">الموديل: ${car.year}</p>
+                <p class="car-engine">المحرك: ${car.engine}</p>
+                <div class="car-price">${car.price}</div>
+                </div>;`
+                carsContainer.appendChild(carCard);
+        });
+    }
+    function displayPremiumCars(cars){
+        premiumCarsContainer.innerHTML = "";
+        cars.forEach(car => {
+            const premiumCard = document.createElement('a');
+            premiumCard.className = 'premium-card';
+            premiumCard.href = car.link;
+            premiumCard.innerHTML = `
+            <div class="premium-badge">VIP متميزه</div>
+            <div class="img-wraapper">
+            <img src="${car.image}" alt="${car.brand} ${car.model}" class="premium-img">
+            </div>
+            <div class="premium-info">
+                <span class="premium-origin">${car.origin}</span>
+                <h3 class="premium-name">${car.brand} -${car.model}</h3>
+                <div class="premium-specs">
+                    <span>🗓️ موديل ${car.year}</span>
+                    <span>⚙️ محرك ${car.engine}</span> 
+                    </div>
+                    <div class="premium-footer">
+                        <span class="premium-price">${car.price}</span>
+                        <button class="order-btn">احجز الان</button>
+                        </div>
+                        </div>
+                        ;`
+
+            premiumCarsContainer.appendChild(premiumCard);
+        })
+    }
+    fetchCars();
+ const carsContainer1 = document.getElementById('carsContainer');
+const premiumCarsContainer1 = document.getElementById('premiumCarsContainer');
+const koreanSportsContainer = document.getElementById('koreanSportsContainer')
+async function fetchCars(){
+        try{
+            const response = await fetch('data.json');
+            const carsData = await response.json();
+            
+            const firstThreeCars = carsData.slice(0, 3);
+            const nextFourCars = carsData.slice(3, 7);
+            const koreanSportCars = carsData. slice(7, 11);
+
+            displayStandardCars(firstThreeCars);
+            displayPremiumCars(nextFourCars);
+            displayKoreanSportsCars(koreanSportCars);
+        } catch (error){
+            console.error("خطا في جلب بيانات السيارات", error);
+        }
+    }
+          function displayKoreanSportsCars(cars){
+        koreanSportsContainer.innerHTML = "";
+        cars.forEach(car => {
+            const sportCard = document.createElement('a');
+            sportCard.className = 'sport-card';
+            sportCard.href = car.link;
+
+            sportCard.innerHTML = `
+            <div class="sport-img-wrapper">
+                <img src="${car.image}" alt="${car.brand} ${car.model}" class="sport-img">
+                <div class="sport-tag">كوري </div>
+                </div>
+                <div class="sport-info">
+                    <h3 class="sport-name">${car.brand} ${car.model}</h3>
+                    <div class="sport-specs-row">
+                        <span>🗓️ ${car.year}</span>
+                        <span>⚙️ ${car.engine}</span>
+                        </div>
+                        <div class="sport-divider"></div>
+                        <div class="sport-price-row">
+                            <span class="price-label">السعر</span>
+                            <span class="sport-price">${car.price}</span>
+                            </div>
+                            </div>
+                            ;`
+                            koreanSportsContainer.appendChild(sportCard);
+        });
+    }
+fetchCars();
+
+const chineseSliderContainer = document.getElementById('chineseSliderContainer');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+let chineseCars = [];
+let currentIndex = 0;
+async function fetchCars(){
+    try{
+        const response = await fetch('data.json');
+        const carsData = await response.json();
+        chineseCars = carsData.filter(car => car.origin === "الصيني");
+        const firstThreeCars = carsData.slice(0, 3);
+        const nextFourCars = carsData.slice(3, 7);
+        displayStandardCars(firstThreeCars);
+        displayPremiumCars(nextFourCars);
+        if(typeof displayKoreanSportsCars === 'function'){
+            displayKoreanSportsCars(carsData.slice(7, 11));
+        }
+        if(chineseCars.length > 0){
+            displaySingleChineseCar(currentIndex);
+        }
+    } catch(error){
+        console.error("خطأ في جلب البيانات:", error);
+    }
+}
+function displaySingleChineseCar(index){
+    const car = chineseCars[index];
+    chineseSliderContainer.innerHTML = "";
+    const sliderCard = document.createElement('a');
+    sliderCard.className = 'slider-card fade-effect';
+    sliderCard.href = car.link || "#";
+    sliderCard.innerHTML = `
+    <div class="slider-img-holder">
+                <img src="${car.image}" alt="${car.brand} ${car.model}" class="slider-img">
+                </div>
+                <div class="slider-info">
+                    <h3 class="slider-car-title">${car.brand} ${car.model}</h3>
+                    <div class="slider-specs-grid">
+                        <span>🗓️ ${car.year}</span>
+                        <span>⚙️ ${car.engine}</span>
+                        </div>
+                        <div class="slider-price-tag">${car.price}</div>
+                        </div>
+                        ;`
+                        chineseSliderContainer.appendChild(sliderCard);
+                    }
+                    nextBtn.addEventListener('click', () => {
+                        currentIndex--;
+                        if(currentIndex < 0){
+                            currentIndex = chineseCars.length - 1;
+                        }
+                        displaySingleChineseCar(currentIndex);
+                    });
+                       prevBtn.addEventListener('click', () => {
+                        currentIndex--;
+                        if(currentIndex < 0){
+                            currentIndex = chineseCars.length - 1;
+                        }
+                        displaySingleChineseCar(currentIndex);
+                    });
+                    fetchCars()
+</script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body{
+            direction: rtl;
+            background: linear-gradient(135deg, #1f2937, #111827);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        header{
+            background-color: rgba(0,0,0,0.7);
+            padding: 60px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        .main-title{
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+        }
+        .sub-title{
+            font-size: 1.5rem;
+            color: #d4af37;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        footer{
+            text-align: center;
+            padding: 30px 0;
+            background-color: rgba(0,0,0,0.8);
+            color: #a0aec0;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+        .main-banner{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px 40px;
+            margin-top: 10px;
+       
+        }
+        .main-banner-img{
+            width: 100%;
+            max-width: 1300px;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .cars-container{
+            display: flex;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            margin-top: 100px;
+        }
+        .car-card{
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            text-align: right;
+        }
+        .car-card:hover{
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+        .car-img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #374151;
+        }
+        .car-info{
+            padding: 20px;
+        }
+        .car-origin{
+            background: #d4af37;
+            color: #000;
+            padding: 2px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .car-name{
+            margin-top: 10px;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+        .car-price{
+            font-size: 1.3rem;
+            color: #d4af37;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .section-title{
+            text-align: center;
+            color: #d4af37;
+            font-size: 1.8rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-family: 'Cairo', sans-serif;
+        }
+        .premium-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .premium-card{
+            background: linear-gradient(145deg, #111827, #1f2937);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            transition: all 0.5s cubic-bezier(0.4, 0 0.2, 1);
+            display: block;
+            text-decoration: none;
+        }
+         .premium-card:hover{
+            border-color: #d4af37;
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25);
+        }
+        .img-wraapper{
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+        }
+        .premium-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .premium-card:hover .premium-img{
+            transform: scale(1.20) rotate(1deg);
+        }
+        .premium-badge{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #e11d48;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 8px;
+            z-index: 3;
+        }
+        .premium-info{
+            padding: 20px;
+            text-align: right;
+        }
+        .premium-origin{
+            background: #374151;
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            padding: 3px 12px;
+            font-size: 0.8rem;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        .premium-name{
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 15px 0 10px 0;
+        }
+        .premium-specs{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .premium-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .premium-price{
+            color: #d4af37;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+        }
+        .order-btn{
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .order-btn:hover{
+            background: #fff;
+        }
+
+
+        .sport-title{
+             text-align: center;
+            color: #d4af37;
+            font-size: 1.8rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-family: 'Cairo', sans-serif;
+        }
+        .sports-container{
+              display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding:20px 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .sport-card{
+           background: #0f172a;
+           border-radius: 24px 4px 24px 4px;
+           border-left: 4px solid #38bdf8;
+           overflow: hidden;
+           position: relative;
+           transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+           box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+           width:100%;
+           min-height: 420px;
+           box-sizing: border-box;
+           display: block;
+           text-decoration: none;
+           
+        }
+        .sport-card:hover{
+            transform: scale(1.04);
+            border-left-color: #f43f5e;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+        }
+        .sport-img{
+           width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+        .sport-img-wrapper{
+            position: relative;
+            height: 190px;
+            overflow: hidden;
+        }
+       
+        .sport-tag{
+             position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(15, 23, 42, 0.85);
+            color: #38bdf8;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid #38bdf8;
+        }
+        .sport-info{
+             padding: 20px;
+            text-align: right;
+        }
+        .sport-name{
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .sport-specs-row{
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        .sport-divider{
+            height: 1px;
+            background: linear-gradient(to left, rgba(56, 189, 248, 0.4));
+            margin-bottom: 15px;
+        }
+        .sport-price-row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price-label{
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+        .sport-price{
+            color: #38bdf8;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .slider-section-title{
+            text-align: center;
+            color: #22c55e;
+            font-size: 1.8rem;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .slider-wrapper{
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .slider-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-card{
+            width: 100%;
+            background: linear-gradient(135deg, #111827 0%, #111827 100%);
+            border: 2px solid #22c55e;
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(34, 197, 94, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .slider-card:hover{
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.25);
+        }
+
+        .slider-img-holder{
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .slider-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-info{
+            padding: 25px;
+            text-align: right;
+        }
+
+        .slider-car-title{
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .slider-specs-grid{
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            color: #9ca3af;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 15px;
+        }
+
+        .slider-price-tag{
+            color: #22c55e;
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .slider-btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid #22c55e;
+            color: #22c55e;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .slider-btn:hover{
+            background: #22c55e;
+            color: #000;
+            box-shadow: 0 0 15px #22c55e;
+        }
+
+        .next-btn{
+            right: -70px;
+        }
+
+        .prev-btn{
+            left: -70px;
+        }
+        .fade-effect{
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn{
+            from{opacity: 0; transform: translateY(5px);}
+            to{opacity: 1; transform: translateY(0);}
+        }
+        .site-instructions{
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 40px 20px 20px 20px;
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+        }
+        .instructions-container{
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .instructions-container h2{
+            color: #f39c12;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .instructions-grid{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .instructions-item{
+            flex: 1;
+            min-width: 280px;
+            background-color: #2c3e50;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .instructions-item:hover{
+            transform: translateY(-5px);
+        }
+        .instructions-item i{
+            font-size: 2rem;
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+        .instructions-item h3{
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #ecf0f1;
+        }
+        .instructions-item p{
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #bdc3c7;
+        }
+        .footer-divider{
+            border: 0;
+            height: 1px;
+            background: #4b5563;
+            margin: 30px 0 15px 0;
+        }
+        .copyrights{
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+        .booking-contacts{
+            margin-top: 20PX;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .booking-contacts p{
+            font-weight: bold;
+            font-size: 1rem;
+            color: #f39c12;
+            margin-bottom: 5px;
+        }
+        .contact-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+        .whatsapp-btn{
+            background-color: #25D366;
+        }
+        .whatsapp-btn:hover{
+            background-color: #128C7E;
+            transform: scale(1.01);
+        }
+        .telegrem-btn{
+            background-color: #0088cc;
+        }
+        .telegrem-btn:hover{
+            background-color: #006699;
+            transform: scale(1.01);
+        }
+        .contact-btn i{
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0;
+        }
+        @media(max-width:430px){
+           html, body{
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+           }
+    
+            .main-title{
+                font-size: 2rem;
+                padding: 0 10px;
+            }
+            .sub-title{
+                font-size: 1.1rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+             .main-banner{
+                padding: 15px 15px;
+             }
+              .main-banner-img{
+                max-height: 250px;
+              }
+              .cars-container{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                padding: 20px 25px;
+                margin-top: 150px;
+              }
+               .car-card{
+                width: 100%;
+                max-width: 100%;
+               }
+               .car-img{
+                height: 220px;
+                object-fit: cover;
+               }
+               .car-info{
+                padding: 15px;
+               }
+               .car-name{
+                font-size: 1.2rem;
+                margin-top: 8px;
+               }
+               .car-year, .car-engine{
+                font-size: .9rem;
+               }
+        .car-price{
+            font-size: 1.15rem;
+            margin-top: 10px;
+        }
+        .premium-container{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 15px 25px;
+        }
+        .premium-card{
+            width: 100%;
+        }
+        .img-wraapper{
+            height: 220px;
+        }
+        .sports-container{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 15px 25px;
+        }
+        .sport-card{
+            width: 100%;
+        }
+        .slider-wrapper{
+            max-width: 80%;
+            padding: 10px 0;
+        }
+        .slider-img-holder{
+            height: 200px;
+        }
+        .slider-btn{
+            width: 40px;
+            height: 40px;
+            font-size: 1.1rem;
+        }
+        .next-btn{right: -45px;}
+        .prev-btn{left: -45px;}
+        .slider-car-title{
+            font-size: 19px;
+        }
+        .slider-price-tag{
+            font-size: 17px;
+        }
+        
+        }
+    </style>
+</body>
+</html>
