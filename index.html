@@ -47,6 +47,29 @@
         <a href="https://wa.me/7840603453" target="_blank"><img src="img/33whtsApp.png"></a>
     </div>
 </div>
+        <div class="weather-container">
+        <h1>طقس المدن المباشره 🌤️</h1>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="ابحث عن مدينه...">
+            <button id="search-btn">بحث</button>
+        </div>
+        <div class="error-message" id="error-box">عذرأ.  لم يتم العثور على المدينه!</div>
+        <div class="weather-info" id="weather-box">
+            <div class="city" id="city-name">اسم المدينه</div>
+            <div class="temp"><span id="temp-val">0</span>°م</div>
+            <div class="description" id="weather-desc">حالة الطقس</div>
+            <div class="details">
+                <div class="col">
+                    <span class="label">💧 الرطوبه</span>
+                    <span class="value" id="humidity-val">0%</span>
+                </div>
+                <div class="col">
+                    <span class="label">🌬️ سرعةالرياح</span>
+                    <span class="value" id="wind-val">0 كم/س</span>
+                </div>
+            </div>
+        </div>
+    </div>
 <style>
 *{
     margin: 0;
@@ -224,16 +247,116 @@ header img{
 .samconn img:hover{
     transform: scale(1.1);
 }
-
-
-
-
-
-
-
-
-
-
+    .weather-container{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 25px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    margin:40px auto;
+    box-sizing: border-box
+    
+}
+.weather-container h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.search-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.search-box input{
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    transition: 0.3s;
+}
+.search-box input::placeholder{
+    color: #ddd;
+}
+.search-box input:focus{
+    background: rgba(255,255,255,0.3);
+}
+.search-box button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    color: #1e3c72;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+.search-box button:hover{
+    background: #bbbaba;
+    transform: scale(1.01);
+}
+.weather-info{
+    display: none;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn{
+    from{opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+.city{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.temp{
+    font-size: 64px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+.description{
+    font-size: 18px;
+    margin-bottom: 25px;
+    background: rgba(255,255,255,0.15);
+    padding: 5px 15px;
+    border-radius: 15px;
+    display: inline-block;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+.col .label{
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+.col .value{
+    font-size: 18px;
+    font-weight: bold;
+}
+.error-message{
+    color: #ff4d4d;
+    margin-top: 15px;
+    display: none;
+    font-weight: 500;
+}
 
 
 @media(max-width:600px){
@@ -298,11 +421,107 @@ header img{
         width: 20px;
         height: 20px;
     }
+    .weather-container{
+        width: 90%;
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    .search-box{
+        display: flex;
+        gap: 8px;
+    }
+    .search-box input{
+        font-size: 10px;
+        padding: 10px;
+        flex: 1;
+    }
+    .search-box button{
+        padding: 10px 15px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .weather-info .city{
+        font-size: 24px;
+    }
+    .weather-info .temp{
+        font-size: 50px;
+    }
+    .details{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+        padding-top: 15px;
+    }
+    .details .col{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
      
 }
 </style>
+    
 
-    <script></script>
+    <script>
+        
+
+const searchBtn = document.getElementById("search-btn");
+const cityInput = document.getElementById("city-input");
+const weatherBox = document.getElementById("weather-box");
+const errorBox = document.getElementById("error-box");
+
+async function checkWeather(city){
+    try {
+    const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en`;
+    const geoResponse = await fetch(geoUrl);
+    const geoData = await geoResponse.json();
+    
+        
+        if(!geoData.results || geoData.results.length === 0){
+            errorBox.style.display = "block";
+            weatherBox.style.display = "none"
+            return;
+        }
+       
+        const lat = geoData.results[0].latitude;
+        const lon = geoData.results[0].longitude;
+        const cityNameWithCountry = `${geoData.results[0].name}, ${geoData.results[0].country}`;
+        const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+        const weatherResponse = await fetch(weatherUrl);
+        const weatherData = await weatherResponse.json();
+        const currentWeather = weatherData.current_weather;
+        
+        
+        document.getElementById("city-name").innerText = cityNameWithCountry;
+        document.getElementById("temp-val").innerText = Math.round(currentWeather.temperature);
+        document.getElementById("weather-desc").innerText = "الاجواء الحاليه المستمره";
+        document.getElementById("humidity-val").innerText = "تحديث مستمر";
+        document.getElementById("wind-val").innerText = currentWeather.windspeed + "كم/س";
+        weatherBox.style.display = "block";
+        errorBox.style.display = "none";
+    } catch (error) {
+        console.error("حدث خطأ أثناء جلب البيانات :", error);
+        errorBox.style.display = "block";
+        weatherBox.style.display = "none";
+    }
+}
+searchBtn.addEventListener("click", () =>{
+    if(cityInput.value.trim() !== ""){
+        checkWeather(cityInput.value);
+    }
+});
+cityInput.addEventListener("keydown", (event) =>{
+    if(event.key === "Enter"){
+        if(cityInput.value.trim() !== ""){
+            checkWeather(cityInput.value);
+        }
+    }
+});
+    </script>
 </body>
 </html>
