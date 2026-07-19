@@ -1,0 +1,184 @@
+{
+"allAntiques": [
+{
+        "id": 1,
+        "name": "مخطوطه عربيه ",
+        "era": "العصر العباسي",
+        "currentBid": "4,500 $",
+        "imageUrl": "imge/aas.jfif",
+        "status": "المزاد المفتوح",
+        "link":"antiques.html"
+    },
+     {
+        "id": 2,
+        "name": "دينار ذهبي",
+        "era": "العصر الاموي",
+        "currentBid": "4,500",
+        "imageUrl": "imge/دينار ذهب.webp",
+        "status": "المزاد المفتوح",
+        "link":"antiques.html"
+    },
+     {
+        "id": 3,
+        "name": "سيف دمشقي",
+        "era": "العصر الملكي",
+        "currentBid": "7,500",
+        "imageUrl": "imge/سيف دمشقي.jfif",
+        "status": "المزاد المفتوح",
+        "link":"scef.html"
+    },
+     {
+        "id": 4,
+        "name": "انا خرفي بابلي",
+        "era": "الحضاره البابليه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/أناء بابلي.png",
+        "status": "المزاد مفتوح",
+        "link":"Aina.html"
+    },
+    {
+        "id": 5,
+        "name": "الحضاره البابليه",
+        "era":  "تمثال حضاري",
+        "currentBid": "12,000",
+        "imageUrl": "imge/تمثال.webp",
+        "status": "المزاد مفتوح"
+    },
+     {
+        "id": 6,
+        "name": "درع فارسي ذهبي",
+        "era": "الحضاره الفرعونيه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/درع قديم.avif",
+        "status": "المزاد مفتوح"
+    },
+     {
+        "id": 7,
+        "name": "خوذه فضه",
+        "era": "الحضاره البابليه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/خوذه.jfif",
+        "status": "المزاد مفتوح"
+    },
+     {
+        "id": 8,
+        "name": "خاتم ياقوت",
+        "era": "الحضاره البابليه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/خاتم.jfif",
+        "status": "المزاد مفتوح"
+     }
+],
+
+
+"antiqueTabs": [
+     
+     {
+        "id": 1,
+        "tabName": "تليفون ",
+        "title": "تليفون ارضي انتيكا معن بحلقات من الذهب",
+        "currentBid": "30,000",
+        "imageUrl": "imge/تليفون.jpg"
+    },
+     {
+        "id": 2,
+        "tabName": "ساعه أنتيكا",
+        "title": "ساعه تحفيه انتيكيا من الحضاره اليابانيه",
+        "currentBid": "44,000",
+        "imageUrl": "imge/ساعه تخفيه.jfif"
+    },
+     {
+        "id": 3,
+        "tabName": "مزهريه انتيكا",
+        "title": "مزهريات تحفيه من الحضاره السومريه",
+        "currentBid": "22,000",
+        "imageUrl": "imge/مزهريات.jpeg"
+    },
+     {
+        "id": 4,
+        "tabName": "مزهريه تحفيه",
+        "title": "مزهريه تحفيه مطرزه بالذهب",
+        "currentBid": "50,000",
+        "imageUrl": "imge/مزهريه تحفه.jfif"
+    },
+     {
+        "id": 5,
+        "tabName": "تحفيات",
+        "title": "تحفيات ذهبيه من  الحضاره المصريه",
+        "currentBid": "55,000",
+        "imageUrl": "imge/تحف.jfif"
+    }
+],
+"allieslider":[
+{
+        "name": "ساعة جيب أثريه",
+        "era": "الحضاره البابليه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/ساعه جيب.jfif"
+    },
+    {
+        "name": "ساعه رمليه من الخشب",
+        "era": "الحضاره البابليه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/ساعه رمليه.png"
+    },
+    {
+        "name": "مزهريه فخاريه",
+        "era": "الحضاره البابليه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/مزهريه.jfif"
+    },
+    {
+        "name": "اسطرلاب أثري بابلي",
+        "era": "الحضاره البابليه",
+        "currentBid": "12,000",
+        "imageUrl": "imge/اسطرلاب.webp"
+    }
+],
+"tabSlider":[
+    {
+        "id": 1,
+        "title": "فازه كريستال منقوش",
+        "imageUrl": "imge/img(3).jfif",
+        "link": "#"
+    },
+     {
+        "id": 2,
+        "title": "فازه عريضه كريستال",
+        "imageUrl": "imge/img(4).jfif",
+        "link": "#"
+    },
+     {
+        "id": 3,
+        "title": "فازه كريستال طويله",
+        "imageUrl": "imge/img(5).jfif",
+        "link": "#"
+    },
+     {
+        "id": 4,
+        "title": "فازه حلزوني لولبي",
+        "imageUrl": "imge/img(6).jfif",
+        "link": "#"
+    },
+     {
+        "id": 5,
+        "title": "زوج فازات منقوشه",
+        "imageUrl": "imge/img(7).jfif",
+        "link": "#"
+    },
+     {
+        "id": 6,
+        "title": "كأس مزهريه كريستال",
+        "imageUrl": "imge/img(8).jfif",
+        "link": "#"
+    },
+     {
+        "id": 7,
+        "title": "فازه كريستال مموج",
+        "imageUrl": "imge/img(9).jfif",
+        "link": "#"
+    }
+]
+}
+
+

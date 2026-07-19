@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابي</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    .hsape-body{
+        background-color: #0b0b0b;
+        color: #fff;
+        font-family: 'Cairo', sans-serif;
+        margin: 0;
+        padding: 20px;
+        direction: rtl;
+    }
+    .hsape-conainer{
+        max-width: 1200px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 30px;
+    }
+    .hsape-card{
+        background: #121212;
+        border: 1px solid#222;
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        height: fit-content;
+    }
+    .hsape-circle{
+        width: 80px;
+        height: 80px;
+        background: #1f1f1f;
+        border-radius: 50%;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+        border: 2px solid #0f62fe;
+    }
+    .hsape-card h2{
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+    .hsape-card p{
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 15px;
+    }
+    .hsape-badge{
+        background: #1f1f1f;
+        color: #ffcc00;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        display: inline-block;
+    }
+    .divider{
+        border: 0;
+        border-top: 1px dashed #333;
+        margin: 25px 0;
+    }
+    .hsape-box{
+        background: #181818;
+        padding: 15px;
+        border-radius: 12px;
+        text-align: right;
+    }
+    .hsape-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .hsape-info span{
+        color: #aaa;
+        font-size: 14px;
+    }
+    .wallet-balance{
+        color: #00ff66;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .add-funds-btn{
+        width: 100%;
+        padding: 10px;
+        background: #0f62fe;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: 'Cairo';
+        transition: background 0.2s;
+    }
+    .add-funds-btn:hover{
+        background: #002d9c;
+    }
+    .hsape-main{
+        background: #121212;
+        border: 1px solid#222;
+        border-radius: 16px;
+        padding: 25px;
+    }
+    .hsape-title h3{
+        color: #ffcc00;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .hsape-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .user-auction-card{
+        display: flex;
+        gap: 15px;
+        background: #181818;
+        padding: 15px;
+        border-radius: 12px;
+        align-items: center;
+        border: 1px solid#252525;
+    }
+    .hsape-card-img img{
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        background: #0b0b0b;
+        border-radius: 8px;
+    }
+    .hsape-card-details h4{
+        font-size: 14px;
+        margin-bottom: 6px;
+        color: #eee;
+    }
+    .hsape-card-details p{
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 8px;
+    }
+    .price-txt{
+        color: #fff;
+        font-weight: bold;
+    }
+    .status-badge{
+        font-size: 11px;
+        font-weight: bold;
+        display: block;
+    }
+    .status-winning .status-badge{
+        color: #00ff66;
+    }
+    .status-losing .status-badge{
+        color: #ff3333;
+    }
+     body{
+        animation: fadelnPage 0.6s ease-in-out forwards;
+        opacity: 0;
+    }
+    @keyframes fadelnPage{
+        from{
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+
+
+    @media(min-width: 100px) and (max-width: 480px){
+        .hsape-conainer{
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .hsape-card, .hsape-main{
+            padding: 10px 6px;
+        }
+        .hsape-grid{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .user-auction-card{
+            flex-direction: column;
+            text-align: center;
+            padding: 10px 6px;
+        }
+        .hsape-card-img img{
+            width: 55px;
+            height: 55px;
+        }
+        .hsape-card-details h4{
+            font-size: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .hsape-card-details p{
+            font-size: 9px;
+        }
+         .status-badge{
+            font-size: 9px;
+         }
+    }
+
+
+
+    @media(min-width: 480px) and (max-width: 1200px){
+        .hsape-conainer{
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        .hsape-card{
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .hsape-grid{
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body class="hsape-body">
+    <div class="hsape-conainer">
+
+        <aside class="hsape-card">
+            <div class="hsape-avatar-box">
+                <div class="hsape-circle">👤</div>
+                <h2 id="profileUserName">محمدالعراقي</h2>
+                <p id="profileUserEmail">mohammed@example.com</p>
+                <span class="hsape-badge" id="profileUserCountry">العراق</span>
+            </div>
+            <hr class="divider">
+
+            <div class="hsape-box">
+                <div class="hsape-info">
+                    <span><i class="fa-solid fa-wallet"></i>المحفظه الرقميه</span>
+                    <strong class="wallet-balance">$25,000</strong>
+                </div>
+                <button class="add-funds-btn" onclick="chargeWallet()"><i class="fa-solid fa-plus"></i>شحن الرصيد</button>
+            </div>
+        </aside>
+        <main class="hsape-main">
+            <div class="hsape-title">
+                <h3><i class="fa-solid fa-gavel"></i>تتبع مزاداتك النشطه</h3>
+            </div>
+
+            <div class="hsape-grid">
+                <div class="user-auction-card status-winning">
+                    <div class="hsape-card-img">
+                        <img src="../img/imge/أناء بابلي.png" alt="أناء">
+                    </div>
+                    <div class="hsape-card-details">
+                        <h4>أناء خزفي بابلي أثري</h4>
+                        <p>زايدت بقيمة: <span class="price-txt">$12,000</span></p>
+                        <span class="status-badge">أنت أعلى مزايد حاليا</span>
+                    </div>
+                </div>
+
+                <div class="user-auction-card status-losing">
+                    <div class="hsape-card-img">
+                        <img src="../img/imge/أناء بابلي.png" alt="أناء">
+                    </div>
+                    <div class="hsape-card-details">
+                        <h4>أناء خزفي بابلي أثري</h4>
+                        <p>زايدت بقيمة: <span class="price-txt">$12,000</span></p>
+                        <span class="status-badge">أنت أعلى مزايد حاليا</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    
+    <script>
+  document.addEventListener("DOMContentLoaded", function(){
+    const storedUserData = localStorage.getItem('registeredUser');
+    if(storedUserData){
+        const user = JSON.parse(storedUserData);
+        document.getElementById('profileUserName').innerText = `${user.first_name} ${user.last_name}`;
+        document.getElementById('profileUserEmail').innerText = user.user_email;
+        document.getElementById('profileUserCountry').innerText = `${user.user_country}`;
+    }else{
+        document.getElementById('profileUserName').innerText = "محمد العراقي";
+        document.getElementById('profileUserEmail').innerText = "mohammed@mzad.com";
+        document.getElementById('profileUserCountry').innerText = "العراق";
+    }
+    updateWalletUI();
+  });
+  function updateWalletUI(){
+    let currentBalance = localStorage.getItem('walletBalance');
+    if(currentBalance === null){
+        currentBalance = 25000;
+        localStorage.setItem('walletBalance', currentBalance);
+    }
+
+    const balanceElement = document.querySelector('.wallet-balance');
+    if(balanceElement){
+        balanceElement.innerText = `${parseFloat(currentBalance).toLocaleString()}`;
+    }
+  }
+  function chargeWallet(){
+    let amount = prompt("💵أدخل المبلغ الذي تريد شحنه في محفضتك ($):");
+    if(amount === null) return;
+    amount = parseFloat(amount);
+    if(isNaN(amount) || amount <= 0){
+        alert("عذرا. يرجى كتابة مبلغ مالي صحيح");
+        return;
+    }
+    let oldBalance = parseFloat(localStorage.getItem('walletBalance')) || 25000;
+    let newBalance = oldBalance + amount;
+    localStorage.setItem('walletBalance', newBalance);
+    updateWalletUI();
+    const currentUserName = document.getElementById('profileUserName').innerText;
+    sendNotificationToWhatsApp(currentUserName, amount);
+    alert(`تم شحن محفضتك بنجاح: $${amount.toLocaleString()}\nرصيدك الحالي الان هو: $${newBalance.toLocaleString()}`);
+  }
+  function sendNotificationToWhatsApp(userName, amount){
+    const myPhoneNumber = "9647885560427";
+    const message = ` طلب شحن محفطه جديده!\n\nأسم الزبون: ${userName}\nالمبلغ المطلوب: $${amount.toLocaleString()}\n\nيرجى تأكيد أستلام المبلغ كاش وتحويل الرصيد بالمنصه.`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${myPhoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+   function navigateSmoothly(url){
+            document.body.style.transition = "opacity 0.4s ease-in-out";
+            document.body.style.opacity = "0";
+            setTimeout(() => {
+                window.location.href = url;
+            }, 400);
+        }
+
+    </script>
+</body>
+</html>

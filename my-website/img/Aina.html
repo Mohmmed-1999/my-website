@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل القطعه الاثريه</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="toastContainer" class="toast-container"></div>
+    <div id="imageModal" class="image-modal" onclick="closeModal()">
+        <span class="close-modal-btn">&times;</span>
+        <img id="modalTargetImg" src="" alt="معاينة الصوره">
+    </div>
+<header class="category-header">
+    <h1>القطع || الانتيكات</h1>
+    <div class="breadcrumbs">
+    <a href="/img/index1.html">الرىْيسيه</a> &gt; <a href="/img/Aina.html">القطع</a> &gt; <span>الأنتيكات</span>
+    </div>
+</header>
+
+<div class="control-bar">
+    <div class="category-sub-title">الأنتيكات</div>
+    <div class="sort-wrapper">
+        <select class="sort-select" id="priceSorter">
+            <option value="default">ترتيب</option>
+            <option value="low">السعر:من الأقل للأعلى</option>
+            <option value="high">السعر:من الأعلى لللأقل</option>
+        </select>
+    </div>
+ 
+</div>
+
+<main class="products-grid-continer" id="productsGrid">
+</main>
+   <section class="special-offers-section">
+    <div class="products-grid-continer" id="discountedProductsGrid">
+    </div>
+</section>
+
+<div class="testimonials-section">
+    <h2 class="section-title-link">تعليقات نفخر بها</h2>
+</div>
+
+<div class="testimonials-grid">
+
+    <div class="testimonials-card">
+        <div class="quote-mark">''''</div>
+        <div class="testimonials-content">
+            <p class="testimonials-text">"تعامل راقي جدا والقطع الأثريه وصلة مغلفه بعنايه فاىْقه"</p>
+            <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <div class="user-info-row">
+            <div class="user-meta">
+                <span class="user-name"> سماح رعد</span>
+                <span class="user-city">مصر</span>
+            </div>
+            <div class="user-avatar">
+                <i class="fa-solid fa-user-tie" style="color: #44546a;"></i>
+            </div>
+        </div>
+        <div class="bg-number">01</div>
+    </div>
+
+
+
+
+     <div class="testimonials-card  card-large">
+        <div class="quote-mark">''''</div>
+        <div class="testimonials-content">
+            <p class="testimonials-text">"اجمل من الصوره شكرا لكم ومطابقه تماما للوصف تجربه تستحق التكرار"</p>
+            <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+         <div class="user-info-row">
+            <div class="user-meta">
+                <span class="user-name">Lama M</span>
+                <span class="user-city">السعوديه</span>
+            </div>
+            <div class="user-avatar">
+                <i class="fa-solid fa-user-nurse" style="color: #44546a;"></i>
+            </div>
+        </div>
+        <div class="bg-number">02</div>
+    </div>
+
+
+     <div class="testimonials-card">
+        <div class="quote-mark">''''</div>
+        <div class="testimonials-content">
+            <p class="testimonials-text">"وصلت وكانت سليمه وجميله"</p>
+            <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+         <div class="user-info-row">
+            <div class="user-meta">
+                <span class="user-name">مصعب فوزي</span>
+                <span class="user-city">قطر</span>
+            </div>
+            <div class="user-avatar">
+                <i class="fa-solid fa-user" style="color: #44546a;"></i>
+            </div>
+        </div>
+        <div class="bg-number">03</div>
+    </div>
+
+     <div class="testimonials-card">
+        <div class="quote-mark">''''</div>
+        <div class="testimonials-content">
+            <p class="testimonials-text">"شكرا لكم على المصداقيه حقا تجربه تستحق التكرار"</p>
+            <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+         <div class="user-info-row">
+            <div class="user-meta">
+                <span class="user-name">محمد الموسوي</span>
+                <span class="user-city">العراق</span>
+            </div>
+            <div class="user-avatar">
+                <i class="fa-solid fa-user" style="color: #44546a;"></i>
+            </div>
+        </div>
+        <div class="bg-number">04</div>
+    </div>
+
+     <div class="testimonials-card">
+        <div class="quote-mark">''''</div>
+        <div class="testimonials-content">
+            <p class="testimonials-text">"جميله جدا وممتازه"</p>
+            <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+         <div class="user-info-row">
+            <div class="user-meta">
+                <span class="user-name">هيفاء حسن</span>
+                <span class="user-city">البحرين</span>
+            </div>
+            <div class="user-avatar">
+                <i class="fa-solid fa-user-nurse" style="color: #44546a;"></i>
+            </div>
+        </div>
+        <div class="bg-number">05</div>
+    </div>
+
+     <div class="testimonials-card">
+        <div class="quote-mark">''''</div>
+        <div class="testimonials-content">
+            <p class="testimonials-text">"خيااال فوق ماكنت متوقع شكرا لكم من القلب وشكرا على مصداقيتكم"</p>
+            <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+         <div class="user-info-row">
+            <div class="user-meta">
+                <span class="user-name">قمر سعد</span>
+                <span class="user-city">سوريا</span>
+            </div>
+            <div class="user-avatar">
+                <i class="fa-solid fa-user-nurse" style="color: #44546a;"></i>
+            </div>
+        </div>
+        <div class="bg-number">06</div>
+    </div>
+
+     <div class="testimonials-card">
+        <div class="quote-mark">''''</div>
+        <div class="testimonials-content">
+            <p class="testimonials-text">"راىْعه جدا والقطعه مغلفه تغليف فخم شكرا لكم"</p>
+            <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+         <div class="user-info-row">
+            <div class="user-meta">
+                <span class="user-name">سناء العزاوي</span>
+                <span class="user-city">اليمن</span>
+            </div>
+            <div class="user-avatar">
+                <i class="fa-solid fa-user-nurse" style="color: #44546a;"></i>
+            </div>
+        </div>
+        <div class="bg-number">07</div>
+    </div>
+</div>
+<footer class="main-footer-section">
+    <div class="footer-container">
+
+        <div class="footer-brand-area">
+            <div class="footer-logo">
+                <i class="af-solid fa-hotel" style="font-size: 2.5rem; color: #ffffff;"></i>
+            </div>
+            <p class="footer-description">
+                أنتيكا متجر مخصص لبيع القطع الأثريه والقديمه والتحف المميزه نضم لمسه من الجمال والأناقه .ثقتكم محل اهتمامنا
+            </p>
+        </div>
+
+        <div class="footer-contact-row">
+            <a href="#" class="contact-item">
+                <span>support@antikasa.com</span>
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="#" class="contact-item">
+                <span>+11223456700</span>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </a>
+            <a href="#" class="contact-item">
+                <span>+23432345556</span>
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <div class="footer-links-social-row">
+            <ul class="footer-nav-links">
+                <li><a href="#">من نحن</a></li>
+                <li><a href="#">التفاصيل والتنفيذ الداخلي</a></li>
+                <li><a href="#">الشروط والاحكام</a></li>
+                <li><a href="#">سياسة الخصوصيه</a></li>
+                <li><a href="#">الشحن والتفاصيل</a></li>
+                <li><a href="#">الاستبدال والارجاع</a></li>
+                <li><a href="#">الأسىْله الأشاىْعه</a></li>
+                <li><a href="#">تواصل معنا</a></li>     
+            </ul>
+            <div class="footer-social-icons">
+                <a href="#"><i class="fa-solid fa-moon"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <hr class="footer-divider">
+
+        <div class="footer-bottom-row">
+            <div class="payment-gateways-container">
+                <div class="payment-card-badge"><img src="../img/imge/مدى.png" alt="مدى"></div>
+                <div class="payment-card-badge"><img src="../img/imge/اس تي سي باي.jpeg" alt="اس تي سي"></div>
+                <div class="payment-card-badge"><img src="../img/imge/ابل باي.jfif" alt="ابل باي"></div>
+                <div class="payment-card-badge"><img src="../img/imge/تابي.jfif" alt="تابي"></div>
+                <div class="payment-card-badge"><img src="../img/imge/فيزا.jfif" alt="فيزا"></div>
+            </div>
+            <div class="footer-copyrights">
+                الحقوق المحفوضه|2026 متجر أنتيكا
+            </div>
+            <div class="verification-badges">
+                <div class="verif-badge-item">
+                    <div class="verif-text">
+                        <span>موثق لدى</span>
+                        <strong>منصة الأعمال</strong>
+                    </div>
+                    <div class="verif-icon"><i class="fa-solid fa-shield-halved" style="color: #435ebe;"></i></div>
+                </div>
+                <div class="verif-badge-item">
+                    <div class="verif-text">
+                        <span>الرقم الضريبي</span>
+                        <strong>30223319668554554</strong>
+                    </div>
+                    <div class="verif-icon"><i class="fa-solid fa-file-invoice-dollar" style="color: #2ec4b6;"></i></div>
+                </div>
+                <div class="verif-badge-item">
+                    <div class="verif-text">
+                        <span>السجل التجاري</span>
+                        <strong>321123445</strong>
+                    </div>
+                    <div class="verif-icon"><i class="fa-solid fa-building" style="color: #2a9d8f;"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    const antiquesData = [
+        {
+            id: 1,
+            name: "اناء مزغرف من الحضاره الصينيه ",
+            price: "70,000",
+            img: "imge/اناء 5.jpg",
+            link: "#"
+        },
+         {
+            id: 2,
+            name: "اناء نوع أخر مزغرف من الحضاره الصينيه",
+            price: "50,000",
+            img: "imge/اناء 2.jpg",
+            link: "#"
+        },
+         {
+            id: 3,
+            name: "اناء اخر ايضا مزغرف من الحضاره الصينيه",
+            price: "65,000",
+            img: "imge/اناء 3.jpg",
+            link: "#"
+        },
+         {
+            id: 4,
+            name: "اناء مزغرف بالوان هادىْه من الحضاره الصينيه",
+            price: "70,000",
+            img: "imge/اناء 4.jpg",
+            link: "#"
+        },
+          {
+            id: 5,
+            name: "أناء مزغرف يدويا من الخضاره الصينيه",
+            price: "75,000",
+            img: "imge/اناء 1.jpg",
+            link: "#"
+        },
+           {
+            id: 6,
+            name: "اناء أخر ايضا مزغرف يدويا",
+            price: "80,000",
+            img: "imge/اناء 6.jpg",
+            link: "#"
+        },
+           {
+            id: 7,
+            name: "أناء فخاري من الطين صنع سنة 1800 ",
+            price: "85,000",
+            img: "imge/اناء 7.jpg",
+            link: "#"
+        },
+           {
+            id: 8,
+            name: "أناء فخاري من الطين صنع في الصين سنة 1900",
+            price: "85,000",
+            img: "imge/اناء 8.jpg",
+            link: "#"
+        }  
+    ];
+    const discountedProducts = [
+        {
+            id: 101,
+            name: "أبريق معدن أثري عثر عليه سنة 1600",
+            price: "70,000",
+            oldPrice: "100,000",
+            discount: 40,
+            img: "imge/اناء 9.jpg",
+            link: "#"  
+        },
+            {
+            id: 102,
+            name: "أناء من الفخار عثر عليه سنة 1900",
+            price: "80,000",
+            oldPrice: "100,000",
+            discount: 20,
+            img: "imge/اناء 10.jpg",
+            link: "#"  
+        },
+            {
+            id: 103,
+            name: "أناء نوع أخر ايضا من الفخار",
+            price: "80,000",
+            oldPrice: "100,000",
+            discount: 20,
+            img: "imge/اناء 11.jpg",
+            link: "#"  
+        },
+            {
+            id: 104,
+            name: "أناء من الفخار والطين ",
+            price: "70,000",
+            oldPrice: "80,000",
+            discount: 10,
+            img: "imge/اناء 12.jpg",
+            link: "#"  
+        },
+         {
+            id: 105,
+            name: "أناء من الكزاز الصيني",
+            price: "80,000",
+            oldPrice: "70,000",
+            discount: 10,
+            img: "imge/اناء 13.jpg",
+            link: "#"  
+        },
+         {
+            id: 104,
+            name: "أناء من الكزاز الصيني نوع اخر",
+            price: "80,000",
+            oldPrice: "70,000",
+            discount: 10,
+            img: "imge/اناء 14.jpg",
+            link: "#"  
+        },
+         {
+            id: 104,
+            name: "أناء مطلي بطبقه زجاجيه",
+            price: "90,000",
+            oldPrice: "70,000",
+            discount: 20,
+            img: "imge/اناء 15.jpg",
+            link: "#"  
+        },
+         {
+            id: 104,
+            name: "أناء خزفي صيني مطرو بالبورسلين الازرق والابيض",
+            price: "100,000",
+            oldPrice: "80,000",
+            discount: 20,
+            img: "imge/اناء 16.jpg",
+            link: "#"  
+        },
+         {
+            id: 104,
+            name: "أناء من الحجر وعليه نقوشات الحضاره البابليه",
+            price: "150,000",
+            oldPrice: "120,000",
+            discount: 30,
+            img: "imge/اناء 17.jpg",
+            link: "#"  
+        },
+         {
+            id: 104,
+            name: "أناء من المعدن والنحاس مطرز بألوان فاخره",
+            price: "350,000",
+            oldPrice: "300,000",
+            discount: 50,
+            img: "imge/اناء 18.jpg",
+            link: "#"  
+        },
+         {
+            id: 104,
+            name: "أناء من السيراميك او البورسلين الصيني ",
+            price: "80,000",
+            oldPrice: "60,000",
+            discount: 20,
+            img: "imge/اناء 19.jpg",
+            link: "#"  
+        },
+         {
+            id: 104,
+            name: "أناء خزفي من المرمر الصيني ",
+            price: "60,000",
+            oldPrice: "50,000",
+            discount: 10,
+            img: "imge/اناء 20.jpg",
+            link: "#"  
+        }
+    ];
+    function renderProducts(products){
+        const grid = document.getElementById('productsGrid');
+        grid.innerHTML = '';
+        products.forEach(item => {
+            const cardHTML = `
+            <div class="ant-product-card">
+            <div class="img-continer">
+
+            <div class="heart-icon-btn" onclick="toggleHeart(event, this, '${item.name}')">
+                <i class="fa-regular fa-heart"></i>
+                </div>
+
+            <img src="${item.img}" alt="${item.name}" onclick="window.location.href='${item.link}?id=${item.id}'">
+            </div>
+            <div class="card-details" onclick="window.location.href='${item.link}?id=${item.id}'">
+                <h3 class="product-title">${item.name}</h3>
+                <div class="price-row">
+                <span class="price-val">${item.price.toLocaleString('en-US', {minimumFractionDigits:2})}$</span>
+                </div>
+                <span class="tax-statement">السعر شامل الضريبه</span>
+                </div>
+                <div class="card-action-row">
+                <div class="preview-eye-btn" onclick="openImageModal(event, '${item.img}')">
+                    <i class="fa-regular fa-eye"></i>
+                    </div>
+                <button class="add-to-cart-action-btn" onclick="alert('تمت أضافة القطعه الى السله')">أضافه للسله</button>
+                </div>
+                </div>
+                `;
+                grid.innerHTML += cardHTML;
+        });
+    }
+
+
+
+
+    function renderDiscountedProducts(products){
+        const grid = document.getElementById('discountedProductsGrid');
+        grid.innerHTML = '';
+        products.forEach(item => {
+            grid.innerHTML += `
+            <div class="ant-product-card">
+            <div class="img-continer">
+
+            <div class="heart-icon-btn" onclick="toggleHeart(event, this, '${item.name}')">
+                <i class="fa-regular fa-heart"></i>
+                </div>
+
+            <img src="${item.img}" alt="${item.name}" onclick="window.location.href='${item.link}?id=${item.id}'">
+            </div>
+            <div class="card-details" onclick="window.location.href='${item.link}?id=${item.id}'">
+                <h3 class="product-title">${item.name}</h3>
+
+
+                <div class="price-section">
+                    <div class="current-price-row">
+                <span class="price-val">${item.price}$</span>
+                </div>
+                <div class="discount-row">
+                    <span class="discount-badge">خصم ${item.discount}%</span>
+                    <span class="old-price-val">${item.oldPrice}$</span>
+                    </div>
+                    </div>
+                    <span class="tax-statement">السعر شامل الضريبه</span>
+                    </div>
+                    <div class="card-action-row">
+                    <div class="preview-eye-btn" onclick="openImageModal(event, '${item.img}')">
+                    <i class="fa-regular fa-eye"></i>
+                    </div>
+                     <button class="add-to-cart-action-btn" onclick="alert('تمت أضافة القطعه الى السله')">أضافه للسله</button>
+                    </div>
+                    </div>
+                    `;
+                });
+            }       
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderProducts(antiquesData);
+        renderDiscountedProducts(discountedProducts);
+
+        document.getElementById('priceSorter').addEventListener('change', (e) => {
+            let sortedData = [...antiquesData];
+            if(e.target.value === 'low'){
+                sortedData.sort((a, b) => a.price - b.price);
+            }else if(e.target.value === 'high'){
+                sortedData.sort((a, b) => b.price - a.price);
+            }
+            renderProducts(sortedData);
+        });
+    });
+   
+   function showToast(massage){
+    const container = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = 'toast-alert';
+    toast.innerText = massage;
+    container.appendChild(toast);
+
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 400);
+    }, 3000);
+   }
+
+   function toggleHeart(event, element, productName){
+    event.stopPropagation();
+    const icon = element.querySelector('i');
+    if(icon.classList.contains('fa-regular')){
+        icon.className = 'fa-solid fa-heart';
+        element.style.color = '#e04f4f';
+        showToast('تم أضافة القطعه للمفضله');
+    }else{
+        icon.className = 'fa-regular fa-heart';
+        element.style.color = '#666';
+        showToast('تم أزالة القطعه من المفضله');
+    }
+   }
+
+   function openImageModal(event, imgSrc){
+    event.stopPropagation();
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalTargetImg');
+    modalImg.src = imgSrc;
+    modal.classList.add('active');
+   }
+   function closeModal(){
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+   }
+</script>
+
+
+<style>
+    body{
+        font-family: 'Cairo', sans-serif;
+        background-color: #fcfdfa;
+        margin: 0;
+        padding: 0;
+        color: #1a1a1a;
+        opacity: 0;
+            animation: fadeInPageSafe 0.8s ease-in-out forwards;
+    }
+     @keyframes fadeInPageSafe{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    .category-header{
+        text-align: center;
+        padding: 40px 20px 20px 20px;
+        background: #fff;
+        border-bottom: 1px solid#f3eff0;
+    }
+    .category-header h1{
+        font-size: 2.2rem;
+        margin: 0 0 10px 0;
+        font-weight: 700;
+    }
+    .breadcrumbs{
+        font-size: 0.85rem;
+        color: #888;
+    }
+    .breadcrumbs a{
+        color: #1a1a1a;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+    .control-bar{
+        max-width: 1300px;
+        margin: 30px auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .category-sub-title{
+        font-size: 1.15rem;
+        font-weight: 600;
+    }
+    .sort-select{
+        font-family: 'Cairo', sans-serif;
+        padding: 8px 25px;
+        border: 1px solid#e2dbcd;
+        border-radius: 4px;
+        background: #fff;
+        font-size: 0.95rem;
+        cursor: pointer;
+        outline: none;
+    }
+    .products-grid-continer{
+        max-width: 1300px;
+        margin: 0 auto 60px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    .ant-product-card{
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        padding-bottom: 15px;
+        border: 1px solid#f5f2eb;
+    }
+    .ant-product-card:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+    .img-continer{
+        position: relative;
+        width: 100%;
+        height: 280px;
+        background: white;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .img-continer img{
+       
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .heart-icon-btn{
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        font-size: 0.95rem;
+        z-index: 5;
+        transition: transform 0.2s;
+    }
+    .heart-icon-btn:hover{
+        transform: scale(1.1);
+    }
+    .card-details{
+        padding: 15px;
+        text-align: center;
+        flex-grow: 1;
+    }
+    .product-title{
+        font-size: 0.92rem;
+        color: #333;
+        margin: 0 0 12px 0;
+        font-weight: 400;
+        line-height: 1.6;
+        height: 54px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .price-row{
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 5px;
+    }
+    .tax-statement{
+        font-size: 0.78rem;
+        color: #a0a0a0;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .card-action-row{
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        gap: 15px;
+    }
+    .preview-eye-btn{
+        border: 1px solid#e8e4dc;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        font-size: 0.9rem;
+        background: #fff;
+        transition: background 0.2s, color 0.2s;
+    }
+    .preview-eye-btn:hover{
+        background: #1a1a1a;
+        color: #fff;
+        border-color: #1a1a1a;
+    }
+    .add-to-cart-action-btn{
+        flex: 1;
+        background: #e2dbcd;
+        border: none;
+        color: #222;
+        padding: 11px;
+        font-family: 'Cairo', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+    .add-to-cart-action-btn:hover{
+        background: #1a1a1a;
+        color: #fff;
+    }
+    .toast-container{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .toast-alert{
+        background: #1a1a1a;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        direction: rtl;
+        animation: slideInLeft 0.4s ease forwards;
+        transition: opacity 0.4s ease;
+    }
+    @keyframes slideInLeft{
+        from{transform: translateX(-100px); opacity: 0;}
+        to{transform: translateX(0); opacity: 1;}
+    }
+    .image-modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.75);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    .image-modal.active{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .image-modal img{
+        max-width: 85%;
+        max-height: 85%;
+        border-radius: 8px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+        background: #fff;
+        padding: 10px;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+    .image-modal.active img{
+        transform: scale(1);
+    }
+    .close-modal-btn{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+    .close-modal-btn:hover{
+        color: #e2dbcd;
+    }
+   
+    .section-title-accent{
+        font-size: 1.5rem;
+        color: #1a1a1a;
+        margin-bottom: 25px;
+        font-weight: 700;
+        position: relative;
+        padding-right: 15px;
+    }
+    
+    .price-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 5px;
+    }
+    .current-price-row{
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+    .discount-row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 0.88rem;
+    }
+    
+    .old-price-val{
+        color: #b5b5b5;
+        text-decoration: line-through;
+        font-weight: 400;
+    }
+    .discount-badge{
+        color: #d14343;
+        font-weight: bold;
+    }
+    .testimonials-section{
+        padding: 40px 15px;
+        background-color: #faf8f5;
+    }
+    .section-title-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #2b2b2b;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    .section-title-link::before,
+    .section-title-link::after{
+        content: '';
+        flex: 1;
+        border-bottom: 1.5px solid #a4a2a2;
+    }
+    .section-title-link::before{
+        margin-left: 20px;
+    }
+    .section-title-link::after{
+        margin-right: 20px;
+    }
+    .testimonials-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: start;
+        direction: rtl;
+        padding: 20px 0;
+    }
+    .testimonials-card{
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 24px;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        border: 1px solid#f3ece3;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonials-card:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+    .card-large{
+        grid-row: span 2;
+        min-height: 420px;
+    }
+    .quote-mark{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 2.5rem;
+        font-family: 'Times New Roman', serif;
+        color: #eae3d8;
+        line-height: 1;
+        font-weight: bold;
+        user-select: none;
+    }
+    .testimonials-content{
+        margin-top: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }
+    .testimonials-text{
+        font-size: 0.95rem;
+        color: #4a4a4a;
+        line-height: 1.6;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+    .stars-rating{
+        display: flex;
+        gap: 4px;
+    }
+    .stars-rating i{
+        color: #ffb81c;
+        font-size: 0.85rem;
+    }
+    .user-info-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid#f9f6f0;
+        position: relative;
+        z-index: 2;
+        padding-top: 15px;
+    }
+    .user-meta{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .user-name{
+        font-size: 0.95rem;
+        font-weight: bold;
+        color: #2b2b2b;
+    }
+    .user-city{
+        font-size: 0.8rem;
+        color: #8c8c8c;
+    }
+    .user-avatar{
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: #f0edf5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        border: 1px solid#e5e0d8;
+    }
+    .bg-number{
+        position: absolute;
+        bottom: -15px;
+        left: 15px;
+        font-size: 4rem;
+        font-weight: 800;
+        color: #f7f5f0;
+        font-family: 'Cairo', sans-serif;
+        user-select: none;
+        z-index: 1;
+    }
+    .main-footer-section{
+        background-color: #1a1a1a;
+        color: #ffffff;
+        padding: 60px 20px 30px 20px;
+        direction: rtl;
+        font-family: 'Cairo', sans-serif;
+    }
+    .footer-container{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-brand-area{
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .footer-logo{
+        margin-bottom: 20px;
+    }
+    .footer-description{
+        font-size: 0.95rem;
+        color: #cccccc;
+        line-height: 1.8;
+        margin: 0;
+    }
+    .footer-contact-row{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        border-bottom: 1px solid#2d2d2d;
+        padding-bottom: 30px;
+    }
+    .contact-item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: color 0.3s;
+    }
+    .contact-item:hover{
+        color: #c9a063;
+    }
+    .contact-item i{
+        font-size: 1.2rem;
+        background: #2d2d2d;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-links-social-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .footer-nav-links{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .footer-nav-links a{
+        color: #bbbbbb;
+        text-decoration: none;
+        font-size: 0.88rem;
+        transition: color 0.3s;
+    }
+    .footer-nav-links a:hover{
+        color: #ffffff;
+    }
+    .footer-social-icons{
+        display: flex;
+        gap: 15px;
+    }
+    .footer-social-icons a{
+        color: #ffffff;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+    }
+    .footer-social-icons a:hover{
+        color: #c9a063;
+    }
+    .footer-divider{
+        border: 0;
+        border-top: 1px solid#2d2d2d;
+        margin: 0;
+    }
+    .footer-bottom-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .payment-gateways-container{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .payment-card-badge{
+        background: #ffffff;
+        padding: 4px 8px;
+        border-radius: 4px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .payment-card-badge img{
+        max-width: 50px;
+        object-fit: contain;
+    }
+    .footer-copyrights{
+        font-size: 0.85rem;
+        color: #888888;
+    }
+    .verification-badges{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .verif-badge-item{
+        background: #252525;
+        border: 1px solid#333333;
+        border-radius: 6px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .verif-text{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+    .verif-text span{
+        font-size: 0.7rem;
+        color: #888888;
+    }
+    .verif-text strong{
+        font-size: 0.8rem;
+        color: #ffffff;
+    }
+    .verif-icon i{
+        font-size: 1.2rem;
+    }
+   
+    @media(min-width: 100px) and (max-width:480px){
+        .category-header{
+            padding: 20px 10px 10px 10px;
+        }
+        .category-header h1{
+            font-size: 1.4rem;
+        }
+        .breadcrumbs{
+            font-size: 0.75rem;
+        }
+        .control-bar{
+            margin: 15px auto;
+            padding: 0 10px;
+        }
+        .category-sub-title{
+            font-size: 1rem;
+        }
+        .sort-select{
+            padding: 5px 12px;
+            font-size: 0.8rem;
+        }
+        .products-grid-continer{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 0 8px;
+        }
+        .ant-product-card{
+            padding-bottom: 8px;
+            border-radius: 4px;
+        }
+        .img-continer{
+            height: 160px;
+            background: #fdfdfd;
+        }
+        .heart-icon-btn{
+            width: 28px;
+            height: 28px;
+            font-size: 0.8rem;
+            bottom: 8px;
+            left: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .card-details{
+            padding: 8px;
+        }
+        .product-title{
+            font-size: 0.78rem;
+            line-height: 1.4;
+            height: 38px;
+            margin-bottom: 6px;
+        }
+        .price-row{
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .tax-statement{
+            font-size: 0.68rem;
+        }
+        .card-action-row{
+            padding: 0 8px;
+            gap: 6px;
+        }
+        .preview-eye-btn{
+            width: 30px;
+            height: 30px;
+            font-size: 0.8rem;
+        }
+        .add-to-cart-action-btn{
+            padding: 8px;
+            font-size: 0.75rem;
+            border-radius: 15px;
+            gap: 4px;
+        }
+        .add-to-cart-action-btn i{
+            font-size: 0.7rem;
+        }
+        #discountedProductsGrid{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 0 8px;
+        }
+        .testimonials-grid{
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 10px 0;
+        }
+        .testimonials-card{
+            padding: 18px;
+            min-height: auto;
+        }
+        .card-large{
+            grid-row: span 1;
+            min-height: auto;
+        }
+        .testimonials-text{
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .quote-mark{
+            font-size: 2rem;
+            top: 5px;
+            right: 15px;
+        }
+        .user-avatar{
+            width: 32px;
+            height: 32px;
+            font-size: 0.95rem;
+        }
+        .user-name{
+            font-size: 0.88rem;
+        }
+        .user-city{
+            font-size: 0.75rem;
+        }
+        .bg-number{
+            font-size: 3rem;
+            bottom: -10px;
+            left: 10px;
+        }
+    }
+    @media(min-width: 480px) and (max-width:1200px){
+        .products-grid-continer{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 0 15px;
+        }
+        .img-continer{
+            height: 100%;
+            
+        }
+        .product-title{
+            font-size: 0.85rem;
+            height: 48px;
+        }
+        .price-row{
+            font-size: 1rem;
+        }
+        .card-large{
+            grid-row: span 2;
+            min-height: 380px;
+        }
+        .testimonials-card{
+            padding: 20px;
+        }
+        .testimonials-text{
+            font-size: 0.92rem;
+        }
+        
+    }
+</style>
+</body>
+</html>

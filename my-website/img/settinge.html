@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعدادات الموقع</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    .settings-body{
+        background-color: #0d0e12;
+        color: #ffffff;
+        font-family: 'Cairo', sans-serif;
+        margin: 0;
+        padding: 20px;
+        direction: rtl;
+    }
+    .settings-container{
+        max-width: 1100px;
+        margin: 40px auto;
+        display: flex;
+        background: #11131a;
+        border: 1px solid#232834;
+        border-radius: 16px;
+        overflow: hidden;
+        min-height: 550px;
+    }
+    .settings-sidebar{
+        width: 250px;
+        background: #161922;
+        border-left: 1px solid#232834;
+        padding: 25px 15px;
+    }
+    .admin-title{
+        font-size: 18px;
+        font-weight: bold;
+        color: #0f62fe;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding-right: 10px;
+    }
+    .settings-tabs{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .tab-item{
+        padding: 12px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        color: #788296;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        transition: 1.2s;
+    }
+    .tab-item:hover, .tab-item.active{
+        background: #1f2431;
+        color: #ffffff;
+    }
+    .tab-item.active{
+        border-right: 4px solid#0f62fe;
+    }
+    .settings-content{
+        flex: 1;
+        padding: 40px;
+    }
+    .content-section{
+        display: none;
+    }
+    .content-section.active{
+        display: block;
+    }
+    .section-title{
+        margin: 0 0 5px 0;
+        font-size: 22px;
+    }
+    .section-desc{
+        color: #788296;
+        font-size: 13px;
+        margin: 0 0 30px 0;
+    }
+    .settings-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #161922;
+        border: 1px solid#232834;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    .settings-info h4{
+        margin: 0 0 5px 0;
+        font-size: 15px;
+    }
+    .settings-info p{
+        margin: 0;
+        font-size: 12px;
+        color: #788296;
+    }
+    .toggle-switch{
+        position: relative;
+        width: 50px;
+        height: 26px;
+        display: inline-block;
+    }
+    .toggle-switch input{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider{
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2d3446;
+        transition: 0.3s;
+        border-radius: 34px;
+    }
+    .slider::before{
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.3s;
+        border-radius: 50%;
+    }
+    input:checked + .slider{
+        background-color: #0f62fe;
+    }
+    input:checked + .slider::before{
+        transform: translateX(24px);
+    }
+    .settings-input-group{
+        margin-bottom: 20px;
+        background: #161922;
+        border: 1px solid#232834;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .settings-input-group label{
+        display: block;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #f4f5f6;
+    }
+    .settings-input-group input{
+        width: 100%;
+        background: #0d0e12;
+        border: 1px solid #232834;
+        padding: 10px;
+        border-radius: 6px;
+        color: white;
+        font-family: 'Cairo';
+        box-sizing: border-box;
+    }
+    .save-settings-btn{
+        background: #00ff66;
+        color: #0d0e12;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-family: 'Cairo';
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.2s;
+    }
+    .save-settings-btn:hover{
+        background: #00cc52;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    body{
+        animation: fadelnPage 0.6s ease-in-out forwards;
+        opacity: 0;
+    }
+    @keyframes fadelnPage{
+        from{
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @media(min-width: 100px) and (max-width: 480px){
+        .settings-body{
+            padding: 10px;
+        }
+        .settings-container{
+            flex-direction: column;
+            margin: 10px auto;
+            min-height: auto;
+        }
+        .settings-sidebar{
+            width: 100%;
+            border-left: none;
+            border-bottom: 1px solid#232834;
+            box-sizing: border-box;
+            padding: 20px 15px;
+        }
+        .admin-title{
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .settings-tabs{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .tab-item{
+            font-size: 13px;
+            padding: 10px;
+            justify-content: center;
+        }
+        .tab-item.active{
+            border-right: none;
+            border-bottom: 3px solid#0f62fe;
+        }
+        .settings-content{
+            padding: 20px 15px;
+        }
+        .section-title{
+            font-size: 18px;
+            text-align: center;
+        }
+        .section-desc{
+            font-size: 12px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .settings-row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            gap: 15px;
+            padding: 15px 12px;
+        }
+        .settings-info{
+            flex: 1;
+            text-align: right;
+        }
+        .settings-info h4{
+            font-size: 13px;
+            margin: 0 0 4px 0;
+        }
+        .settings-info p{
+            font-size: 11px;
+            line-height: 1.4;
+        }
+        .toggle-switch{
+            position: relative;
+            display: inline-block;
+            flex-shrink: 0;
+            width: 50px;
+            height: 26px;
+        }
+        .slider::before{
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+        }
+        .settings-input-group{
+            padding: 15px 12px;
+        }
+        .save-settings-btn{
+            justify-content: center;
+            font-size: 14px;
+            padding: 12px;
+        }
+    }
+     @media(min-width: 480px) and (max-width: 1200px){
+        .settings-container{
+            margin: 20px auto;
+            min-height: 520px;
+            max-width: 95%;
+        }
+        .settings-sidebar{
+            width: 220px;
+            padding: 20px 10px;
+        }
+        .tab-item{
+            font-size: 13px;
+            padding: 10px;
+            gap: 10px;
+        }
+        .settings-content{
+            padding: 30px;
+        }
+        .section-title{
+            font-size: 20px;
+        }
+        .section-desc{
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+        .settings-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px;
+            gap: 20px;
+        }
+        .settings-info{
+            flex: 1;
+        }
+        .settings-info h4{
+            font-size: 14px;
+            margin: 0 0 4px 0;
+        }
+        .settings-info p{
+            font-size: 11px;
+        }
+        .toggle-switch{
+            position: relative;
+            display: inline-block;
+            flex-shrink: 0;
+            width: 50px;
+            height: 26px;
+        }
+        .slider::before{
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+        }
+        .settings-input-group{
+            padding: 18px;
+        }
+     }
+</style>
+<body class="settings-body">
+    <div class="settings-container">
+        <aside class="settings-sidebar">
+            <div class="admin-title">
+                <i class="fa-solid fa-sliders-h"></i>
+                <span>لوحة الاعدادات</span>
+            </div>
+            <ul class="settings-tabs">
+                <li class="tab-item active" onclick="switchTab('general')"><i class="fa-solid fa-gear"></i>أعدادات عامه</li>
+                <li class="tab-item" onclick="switchTab('auctions')"><i class="fa-solid fa-gavel"></i>أدارة المزادات</li>
+                <li class="tab-item" onclick="switchTab('notifications')"><i class="fa-solid fa-bell"></i>الأشعارات</li>
+            </ul>
+        </aside>
+        <main class="settings-content">
+            <section id="general-section" class="content-section active">
+                <h2 class="section-title">أعدادات الموقع العامه</h2>
+                <p class="section-desc">التحكم في مضهر المنصه الاساسي وحالة التشغيل</p>
+                <div class="settings-row">
+                    <div class="settings-info">
+                        <h4>وضع الصيانه</h4>
+                        <p>"الموقع تحت الصيانه حاليا"</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="maintenanceToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <div class="settings-info">
+                        <h4>(Blur Effect)</h4>
+                        <p>تفعيل غواش الخلفيه عند ضغط الزبون على مربع البحث للتركيز</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="blurToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+            
+            <section id="auctions-section" class="content-section">
+                <h2 class="section-title">أدارة نضام المزايدات</h2>
+                <p class="section-desc">تخص قوانين بيع وشراء الأنتيكات</p>
+
+                <div class="settings-row">
+                    <div class="settings-info">
+                        <h4>المزايده التلقاىْيه الذكيه</h4>
+                        <p>السماح للنضام بقبول المزايدات فورا</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="autoBidToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-input-group">
+                    <label>الحد الأدنى لرفع سعر المزاد($):</label>
+                    <input type="number" id="minBidAmount" value="50">
+                </div>
+            </section>
+
+            <section id="notifications-section" class="content-section">
+                <h2 class="section-title">أعدادت الربط والأشعارات</h2>
+                <p class="section-desc">تعديل أرقام الهواتف وقنوات أستلام طلبات الشحن</p>
+                <div class="settings-input-group">
+                    <label>(صيغه دوليه)رقم الواتساب لأستلام الأشعارات:</label>
+                    <input type="text" id="whatsappNumberInput" value="9647885560427">
+                </div>
+                <button class="save-settings-btn" onclick="saveAllSettings()">
+                    <i class="fa-solid fa-floppy-disk"></i>حفض كافة التعديلات
+                </button>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            loadSavedSettings();
+        });
+        function switchTab(tabId){
+            const tabItems = document.querySelectorAll('.tab-item');
+            tabItems.forEach(item => item.classList.remove('active'));
+
+            const contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach(section => section.classList.remove('active'));
+
+            const clickedTab = document.querySelector(`[onclick="switchTab('${tabId}')"]`);
+            if(clickedTab) clickedTab.classList.add('active');
+            const targetSection = document.getElementById(`${tabId}-section`);
+            if(targetSection) targetSection.classList.add('active');
+        }
+
+        function saveAllSettings(){
+            const maintenanceMode = document.getElementById('maintenanceToggle').checked;
+            const blurEffect = document.getElementById('blurToggle').checked;
+            const autoBid = document.getElementById('autoBidToggle').checked;
+
+            const minBid = document.getElementById('minBidAmount').value;
+            const whatsappNumber = document.getElementById('whatsappNumberInput').value;
+
+            const siteSettings = {
+                maintenanceMode: maintenanceMode,
+                blurEffect: blurEffect,
+                autoBid: autoBid,
+                minBidAmount: minBid,
+                whatsappNumber:whatsappNumber
+            };
+            localStorage.setItem('platformSettings', JSON.stringify(siteSettings));
+            alert("تم حفظ كافة أعدادت المنصه بنجاح");
+        }
+        function loadSavedSettings(){
+            const savedData = localStorage.getItem('platformSettings');
+            if(savedData){
+                const settings = JSON.parse(savedData);
+                document.getElementById('maintenanceToggle').checked = settings.maintenanceMode;
+                document.getElementById('blurToggle').checked = settings.blurEffect;
+                document.getElementById('autoBidToggle').checked = settings.autoBid;
+
+                document.getElementById('minBidAmount').value = settings.minBidAmount;
+                document.getElementById('whatsappNumberInput').value = settings.whatsappNumber;
+            }
+        }
+        function navigateSmoothly(url){
+            document.body.style.transition = "opacity 0.4s ease-in-out";
+            document.body.style.opacity = "0";
+            setTimeout(() => {
+                window.location.href = url;
+            }, 400);
+        }
+    </script>
+</body>
+</html>
